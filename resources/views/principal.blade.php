@@ -42,7 +42,7 @@
 	            <li class="divider"></li>
 	            <li><a href="#">Separated link</a></li>
 	            <li class="divider"></li>
-	            <li><a href="#">One more separated link</a></li>
+	            <li><a href="#">Hello</a></li>
 	          </ul>
 	        </li>
 	      </ul>
