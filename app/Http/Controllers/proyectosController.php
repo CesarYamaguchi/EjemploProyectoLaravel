@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\proyectos;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
 
 class proyectosController extends Controller
 {
@@ -27,7 +28,7 @@ class proyectosController extends Controller
     }
 
     public function consultar(){
-        $proyectos=proyectos::all();
+        $proyectos=DB::table('proyectos')->paginate(5);
         return view('consultarProyectos', compact('proyectos'));
     }
 

@@ -62,3 +62,7 @@ Route::post('/guardarUsuarioProyecto', 'usuarios_proyectosController@guardar');
 
 Route::get('/consultarUsuariosProyectos', 'usuarios_proyectosController@consultar');
 
+
+
+Route::get('/pdfUsuarios', 'usuariosController@pdfUsuarios');
+

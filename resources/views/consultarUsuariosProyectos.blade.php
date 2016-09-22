@@ -16,7 +16,7 @@
 		</thead>
 		<tbody>
 			@foreach($usuarios_proyectos as $up)
-				<tr>
+				<tr> 
 					<td>{{$up->id_usuario}}</td>
 					<td>{{$up->id_proyecto}}</td>
 					<td>
@@ -28,6 +28,7 @@
 			@endforeach
 		</tbody>
 	</table>
+	{!! $usuarios_proyectos !!}
 @stop
 
 

@@ -28,6 +28,7 @@
 	          <ul class="dropdown-menu" role="menu">
 	            <li><a href="{{url('/registrarUsuario')}}">Registrar</a></li>
 	            <li><a href="{{url('/consultarUsuarios')}}">Consultar usuarios</a></li>
+	            <li><a href="{{url('/pdfUsuarios')}}">Imprimir usuarios</a></li>
 	            <li class="divider"></li>
 	            <li><a href="{{url('/registrarUsuarioProyecto')}}">Asignar a proyectos</a></li>
 	            <li><a href="{{url('/consultarUsuariosProyectos')}}">Consultar</a></li>

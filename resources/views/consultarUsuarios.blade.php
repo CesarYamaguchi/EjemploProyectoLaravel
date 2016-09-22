@@ -3,6 +3,9 @@
 
 @section('encabezado')
 	<h2>Consultar Usuarios</h2>
+	<a href="{{url('/pdfUsuarios')}}">
+		<span class="glyphicon glyphicon-file" aria-hiden="true"></span>
+	</a>
 @stop
 
 @section('contenido')
@@ -40,6 +43,7 @@
 			@endforeach
 		</tbody>
 	</table>
+	{!! $usuarios->render() !!}
 @stop
 
 
