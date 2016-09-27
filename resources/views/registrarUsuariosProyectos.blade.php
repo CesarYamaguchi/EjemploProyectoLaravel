@@ -3,7 +3,7 @@
 @section('encabezado')
 	<h2>Asignación de Proyecto</h2>
 @stop
-
+ 
 @section('contenido')
 	<form action="{{url('/guardarUsuarioProyecto')}}" method="POST">
 		<input type="hidden" name="_token" value="{{csrf_token() }}">

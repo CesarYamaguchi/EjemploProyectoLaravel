@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\usuarios_proyectos;
 use App\Http\Requests;
 
 class principalController extends Controller
@@ -25,6 +25,7 @@ class principalController extends Controller
     }
 
     public function registrarUsuarioProyecto(){
-        return view('registrarUsuariosProyectos');
+        $usuarios_proyectos=usuarios_proyectos::All();
+        return view('registrarUsuariosProyectos', compact('usuarios_proyectos'));
     }
 }

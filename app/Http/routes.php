@@ -37,7 +37,7 @@ Route::get('/consultarUsuarios', 'usuariosController@consultar');
 Route::get('/eliminarUsuario/{id}', 'usuariosController@eliminar');
 
 Route::get('/actualizarUsuario/{id}', 'usuariosController@actualizar');
-
+ 
 Route::post('/actualizar/{id}', 'usuariosController@actualizarUsuario');
 
 
