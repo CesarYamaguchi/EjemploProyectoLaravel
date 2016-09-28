@@ -42,6 +42,7 @@ Route::post('/actualizar/{id}', 'usuariosController@actualizarUsuario');
 
 
 
+
 Route::get('/registrarProyecto', 'principalController@registrarProyecto');
 
 Route::post('/guardarProyecto', 'proyectosController@guardar');
@@ -62,6 +63,11 @@ Route::post('/guardarUsuarioProyecto', 'usuarios_proyectosController@guardar');
 
 Route::get('/consultarUsuariosProyectos', 'usuarios_proyectosController@consultar');
 
+Route::get('/asignarUsuarios/{id}', 'usuarios_proyectosController@asignarUsuarios');
+
+Route::post('/agregarUsuario/{id}', 'usuarios_proyectosController@agregarUsuario');
+
+Route::get('/quitarUsuario/{id_proyecto}/{id_usuario}', 'usuarios_proyectosController@quitarUsuario');
 
 
 Route::get('/pdfUsuarios', 'usuariosController@pdfUsuarios');

@@ -5,21 +5,21 @@
 @stop
  
 @section('contenido')
-	<form action="" method="POST">
+	<form action="{{url('/agregarUsuario')}}/{{$proyecto->id}}" method="POST">
 		<input type="hidden" name="_token" value="{{csrf_token() }}">
 		<div class="form-group">
-			<select name="sexo" class="form-control">
+			<select name="id_usuario" class="form-control">
 				@foreach($usuarios as $u)
 					<option value="{{$u->id}}">{{$u->nombre}}</option>
 				@endforeach
 			</select>
 		</div>
-		<input type="submit" value="" class="btn btn-primary">
+		<input type="submit" value="Agregar" class="btn btn-primary">
 	</form>
 	<h2>Lista de usuarios asignados</h2>
 	<hr>
 	<table class="table table-hover">
-		<thead>
+		<thead> 
 			<tr>
 				<th>#</th>
 				<th>Nombre</th>
@@ -32,16 +32,16 @@
 		<tbody>
 			@foreach($usuariosP as $up)
 				<tr>
-					<td>$up->id</td>
-					<td>$up->nombre</td>
-					<td>$up->edad</td>
+					<td>{{$up->id}}</td>
+					<td>{{$up->nombre}}</td>
+					<td>{{$up->edad}}</td>
 					@if($up->sexo == 0)
 						<td>Masculino</td>
 					@else
 						<td>Femenino</td>
 					@endif
-					<td>$up->correo</td>
-					<td><a href="" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove" aria-hidden="true">Quitar</span></a></td>
+					<td>{{$up->correo}}</td>
+					<td><a href="{{url('/quitarUsuario')}}/{{$proyecto->id}}/{{$up->id}}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove" aria-hidden="true">Quitar</span></a></td>
 				</tr>
 			@endforeach
 		</tbody>
