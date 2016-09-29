@@ -46,7 +46,7 @@ Route::post('/actualizar/{id}', 'usuariosController@actualizarUsuario');
 Route::get('/registrarProyecto', 'principalController@registrarProyecto');
 
 Route::post('/guardarProyecto', 'proyectosController@guardar');
-
+ 
 Route::get('/consultarProyectos', 'proyectosController@consultar');
 
 Route::get('/eliminarProyecto/{id}', 'proyectosController@eliminar');
@@ -71,4 +71,4 @@ Route::get('/quitarUsuario/{id_proyecto}/{id_usuario}', 'usuarios_proyectosContr
 
 
 Route::get('/pdfUsuarios', 'usuariosController@pdfUsuarios');
-
+ 
